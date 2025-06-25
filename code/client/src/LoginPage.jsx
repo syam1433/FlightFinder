@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 import "./Loginpage.css"
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -33,13 +35,14 @@ const LoginPage = () => {
     }
 
   } catch (err) {
-    alert(err.response?.data.message || 'Login failed');
+    toast.error(err.response?.data.message || 'Login failed');
   }
 };
 
 
   return (
     <>
+    <ToastContainer position="top-center" autoClose={3000} />
       <div>
         <div className='top'>
           <p className='data1'>SB Flights</p>
@@ -51,7 +54,7 @@ const LoginPage = () => {
         <div className='formed'>
           <div className='formes'>
           <form onSubmit={handleLogin} className="loginform">
-            <p className='p'>Login</p>
+          <p className='p'>Login</p>
           <input className='e' name="email" placeholder="Email" type="email" onChange={handleChange} required />
           <input className='pass' name="password" placeholder="Password" type="password" onChange={handleChange} required />
 

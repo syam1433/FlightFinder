@@ -38,6 +38,10 @@
     height: 70%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);   
 }
+.formes .p{
+    font-size: 30px;
+    color: rgb(8, 110, 212);
+}
 .loginform{
     width: 100%;
     height: 100%;

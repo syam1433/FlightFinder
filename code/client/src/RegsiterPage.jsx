@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "./register.css";
 import { Link } from "react-router-dom";
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +17,6 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    // Add approved: false for operator registration
     const payload = { ...formData };
     if (formData.role === "operator") {
       payload.approved = false;
@@ -23,23 +24,24 @@ const RegisterForm = () => {
 
     const res = await axios.post('http://localhost:3000/api/auth/register', payload);
 
-    // Show proper message for operator
     if (formData.role === "operator") {
-      alert("Registration submitted. Awaiting admin approval.");
+      toast.info("Registration submitted. Awaiting admin approval.");
     } else {
-      alert(res.data.message || "Registered successfully");
+      toast.success(res.data.message || "Registered successfully");
     }
 
     setFormData({ name: '', email: '', password: '', role: 'user' });
 
   } catch (err) {
-    alert(err.response?.data?.message || 'Registration error');
+    toast.error(err.response?.data?.message || 'Registration error');
   }
 };
 
 
+
   return (
     <>
+    <ToastContainer position="top-center" autoClose={3000} />
         <div className='full-app'>
             <div className='top'>
                 <p  className='data1'>SB Flights</p>
