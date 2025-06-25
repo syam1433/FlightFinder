@@ -1,9 +1,9 @@
 import RegisterForm from "./RegsiterPage.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Mainpage from "./mainpage.jsx";
+import Mainpage from "./FirstPage.jsx";
 import LoginPage from "./LoginPage.jsx";
-import UserDashboard from "./userPages/userDashboard.jsx";
-import AdminDashboard from "./adminPages/adminDashboard.jsx";
+import UserDashboard from "./userPages/UserDashboard.jsx";
+import AdminDashboard from "./adminPages/AdminDashboard.jsx";
 import OperatorDashboard from "./operatorPages/operatorDashboard.jsx";
 import Bookings from "./userPages/Bookings.jsx";
 import BookTicket from "./userPages/BookTicket.jsx";
