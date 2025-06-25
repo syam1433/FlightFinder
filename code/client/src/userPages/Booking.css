@@ -40,7 +40,8 @@
 }
 
 @media (max-width: 768px) {
-  .booking-grid {
+  .booking-list {
     grid-template-columns: 1fr; /* 1 column per row on smaller screens */
+    
   }
 }

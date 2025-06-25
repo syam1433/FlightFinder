@@ -186,3 +186,128 @@
 .book-btn:hover {
   background-color: #0049a8;
 }
+
+@media screen and (max-width:992px) {
+.overlay-text {
+  position: absolute;
+  top: 5%;   
+  left: 5%;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Forum", serif;
+  /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); */
+}
+.overlay-text2 {
+  position: absolute;
+  top: 16%;   
+  left: 5%;
+  color: white;
+  font-size: 16px;
+  font-family: "Forum", serif;
+}
+.booking{
+    width: 90%;
+    height: 10%;
+    position: absolute;
+    top: 22%;   
+    left: 5%;
+    color: white;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+     background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);          
+    -webkit-backdrop-filter: blur(8px);
+    font-family: "Forum", serif;
+  
+}
+.overlay-flights {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  max-height: 200px;
+   background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);          
+    -webkit-backdrop-filter: blur(8px);
+  color: black;
+  border-radius: 10px;
+}
+.book-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left:10px ;
+}
+.icon{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+}
+.icon p{
+    margin-left: 5px;
+    display: flex;
+    margin-top: 5px;
+}
+.booking-flight{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+.departurecity{
+    width: 20%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.destinationcity{
+    width: 20%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.date{
+    width: 20%;
+    height: 41px;
+    border-radius: 10px;
+    font-size: 10px;
+}
+.search{
+    width: 20%;
+    height: 45px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+}
+.text-only{
+    width: 100%;
+    height: auto;
+    background-color: rgba(127, 255, 251, 0.221);
+}
+.text-only h1{
+    margin-left: 130px;
+    padding-top: 30px;
+}
+.text-only2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    color: rgba(0, 119, 255, 0.632);
+    
+}
+.text-only2 p{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    font-size: 16px;
+    font-family: "Forum", serif;
+}
+}
