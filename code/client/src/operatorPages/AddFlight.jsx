@@ -27,7 +27,7 @@ const AddFlight = () => {
     const token = localStorage.getItem("token");
 
     try {
-      await axios.post("http://localhost:3000/api/operator/operator-flights", flightData, {
+      await axios.post("https://flightfinder-backend-b9kq.onrender.com/api/operator/operator-flights", flightData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

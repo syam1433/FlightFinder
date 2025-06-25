@@ -11,7 +11,7 @@ const Users = () => {
   useEffect(() => {
     const fetch = async () => {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:3000/api/admin/all-users", {
+      const res = await axios.get("https://flightfinder-backend-b9kq.onrender.com/api/admin/all-users", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data);
