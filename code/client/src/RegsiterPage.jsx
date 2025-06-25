@@ -21,7 +21,7 @@ const RegisterForm = () => {
       payload.approved = false;
     }
 
-    const res = await axios.post('https://flightfinder-backend-b9kq.onrender.com/api/auth/register', payload);
+    const res = await axios.post('http://localhost:3000/api/auth/register', payload);
 
     // Show proper message for operator
     if (formData.role === "operator") {
