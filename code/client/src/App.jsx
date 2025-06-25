@@ -4,7 +4,7 @@ import Mainpage from "./FirstPage.jsx";
 import LoginPage from "./LoginPage.jsx";
 import UserDashboard from "./userPages/UserDashboard.jsx";
 import AdminDashboard from "./adminPages/AdminDashboard.jsx";
-import OperatorDashboard from "./operatorPages/operatorDashboard.jsx";
+import OperatorDashboard from "./operatorPages/OperatorDashboard.jsx";
 import Bookings from "./userPages/Bookings.jsx";
 import BookTicket from "./userPages/BookTicket.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
