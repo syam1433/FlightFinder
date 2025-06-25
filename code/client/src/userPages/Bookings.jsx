@@ -179,7 +179,7 @@ const Bookings = () => {
   const fetchBookings = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("https://flightfinder-backend-b9kq.onrender.com/api/user/bookings", {
+      const res = await axios.get("http://localhost:3000/api/user/bookings", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookings(res.data);
@@ -194,7 +194,7 @@ const Bookings = () => {
 const cancelTicket = async (bookingId) => {
   try {
     const token = localStorage.getItem("token");
-    await axios.put(`https://flightfinder-backend-b9kq.onrender.com/api/user/cancel/${bookingId}`, null, {
+    await axios.put(`http://localhost:3000/api/user/cancel/${bookingId}`, null, {
       headers: { Authorization: `Bearer ${token}` },
     });
     setBookings(prev => prev.map(b => 

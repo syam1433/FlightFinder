@@ -12,7 +12,7 @@ const FlightBookings = () => {
     const fetchBookings = async () => {
       const token = localStorage.getItem("token");
       try {
-        const res = await axios.get("https://flightfinder-backend-b9kq.onrender.com/api/operator/operator-bookings", {
+        const res = await axios.get("http://localhost:3000/api/operator/operator-bookings", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBookings(res.data);

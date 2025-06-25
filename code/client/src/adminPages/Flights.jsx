@@ -11,7 +11,7 @@ const Flights = () => {
   useEffect(() => {
     const fetch = async () => {
       const token = localStorage.getItem("token");
-      const res = await axios.get("https://flightfinder-backend-b9kq.onrender.com/api/admin/all-flights", {
+      const res = await axios.get("http://localhost:3000/api/admin/all-flights", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setFlights(res.data);

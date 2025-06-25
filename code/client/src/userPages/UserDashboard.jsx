@@ -37,7 +37,7 @@ const [departure, setDeparture] = useState("");
   const handleSearch = async () => {
   setSearched(true);
   try {
-    const res = await axios.get("https://flightfinder-backend-b9kq.onrender.com/api/flights");
+    const res = await axios.get("http://localhost:3000/api/flights");
     const filtered = res.data.filter(
       (flight) =>
         flight.origin === departure &&

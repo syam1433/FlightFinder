@@ -1,6 +1,6 @@
 import RegisterForm from "./RegsiterPage.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Mainpage from "./FirstPage.jsx";
+import Mainpage from "./Mainpage.jsx";
 import LoginPage from "./LoginPage.jsx";
 import UserDashboard from "./userPages/UserDashboard.jsx";
 import AdminDashboard from "./adminPages/AdminDashboard.jsx";

@@ -27,10 +27,10 @@ const [pendingOps, setPendingOps] = useState([]);
     const token = localStorage.getItem("token");
 
     const [usersRes, flightsRes, bookingsRes, pendingRes] = await Promise.all([
-      axios.get("https://flightfinder-backend-b9kq.onrender.com/api/admin/all-users", { headers: { Authorization: `Bearer ${token}` } }),
-      axios.get("https://flightfinder-backend-b9kq.onrender.com/api/admin/all-flights", { headers: { Authorization: `Bearer ${token}` } }),
-      axios.get("https://flightfinder-backend-b9kq.onrender.com/api/admin/all-bookings", { headers: { Authorization: `Bearer ${token}` } }),
-      axios.get("https://flightfinder-backend-b9kq.onrender.com/api/admin/pending-operators", { headers: { Authorization: `Bearer ${token}` } }),
+      axios.get("http://localhost:3000/api/admin/all-users", { headers: { Authorization: `Bearer ${token}` } }),
+      axios.get("http://localhost:3000/api/admin/all-flights", { headers: { Authorization: `Bearer ${token}` } }),
+      axios.get("http://localhost:3000/api/admin/all-bookings", { headers: { Authorization: `Bearer ${token}` } }),
+      axios.get("http://localhost:3000/api/admin/pending-operators", { headers: { Authorization: `Bearer ${token}` } }),
     ]);
 
     setUsers(usersRes.data);
@@ -49,8 +49,8 @@ fetchDashboardData();
   const token = localStorage.getItem('token');
   try {
     const url = isApproved
-      ? `https://flightfinder-backend-b9kq.onrender.com/api/admin/approve-operator/${id}`
-      : `https://flightfinder-backend-b9kq.onrender.com/api/admin/reject-operator/${id}`;
+      ? `http://localhost:3000/api/admin/approve-operator/${id}`
+      : `http://localhost:3000/api/admin/reject-operator/${id}`;
 
     await axios.put(url, {}, {
       headers: { Authorization: `Bearer ${token}` },

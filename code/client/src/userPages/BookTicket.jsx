@@ -40,7 +40,7 @@ useEffect(() => {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "https://flightfinder-backend-b9kq.onrender.com/api/user/book",
+        "http://localhost:3000/api/user/book",
         {
           flightId: flight._id,
           flightNumber: flight.flightNumber,
