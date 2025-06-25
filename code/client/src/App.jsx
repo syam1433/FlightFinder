@@ -1,35 +1,77 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import RegisterForm from "./RegsiterPage.jsx";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Mainpage from "./mainpage.jsx";
+import LoginPage from "./LoginPage.jsx";
+import UserDashboard from "./userPages/userDashboard.jsx";
+import AdminDashboard from "./adminPages/adminDashboard.jsx";
+import OperatorDashboard from "./operatorPages/operatorDashboard.jsx";
+import Bookings from "./userPages/Bookings.jsx";
+import BookTicket from "./userPages/BookTicket.jsx";
+import ProtectedRoute from "./ProtectedRoute.jsx";
+import Users from "./adminPages/Users.jsx";
+import Flights from "./adminPages/Flights.jsx";
+import AllBookings from "./adminPages/AllBookings.jsx";
+import AddFlight from "./operatorPages/AddFlight.jsx";
+import YourFlights from "./operatorPages/YourFlights.jsx";
+import FlightBookings from "./operatorPages/FlightBookings.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+  return(
+    <Router>
+      <Routes>
+        <Route path='/' element={<Mainpage />} />
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path='/registration' element={<RegisterForm />} />
+        <Route path="/user-dashboard" element={
+            <ProtectedRoute>
+              <UserDashboard />
+            </ProtectedRoute>
+          } />
+          <Route path="/Users" element={
+            <ProtectedRoute>
+              <Users />
+            </ProtectedRoute>
+          } />
+          <Route path="/Flights" element={
+            <ProtectedRoute>
+              <Flights />
+            </ProtectedRoute>
+          } />
+          <Route path="/AllBookings" element={
+            <ProtectedRoute>
+              <AllBookings />
+            </ProtectedRoute>
+          } />
+        <Route path="/bookings" element={
+            <ProtectedRoute>
+              <Bookings />
+            </ProtectedRoute>
+          }/>
+        <Route path="/admin-dashboard" element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          } />
+        <Route path="/operator-dashboard" element={
+            <ProtectedRoute>
+              <OperatorDashboard />
+            </ProtectedRoute>
+          } />
+        <Route path="/book-ticket" element={
+            <ProtectedRoute>
+              <BookTicket />
+            </ProtectedRoute>
+          } />
+          <Route path="/addflight" element={
+            <ProtectedRoute>
+              <AddFlight />
+            </ProtectedRoute>
+          } />
+          <Route path="/yourFlights" element={<YourFlights />} />
+          <Route path="/flightBookings" element={<FlightBookings />} />
+      </Routes>
+    </Router>
   )
 }
 
-export default App
+export default App;
