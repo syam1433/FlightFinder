@@ -137,6 +137,14 @@ const [departure, setDeparture] = useState("");
               <option value="Rajahmundry">Rajahmundry</option>
               <option value="Vizag">Vizag</option>
               <option value="Delhi">Delhi</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Pune">Pune</option>
+              <option value="Tirupati">Tirupati</option>
+
             </select>
 
             <select
@@ -149,6 +157,14 @@ const [departure, setDeparture] = useState("");
               <option value="Rajahmundry">Rajahmundry</option>
               <option value="Vizag">Vizag</option>
               <option value="Delhi">Delhi</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Pune">Pune</option>
+              <option value="Tirupati">Tirupati</option>
+
             </select>
 
             <input
